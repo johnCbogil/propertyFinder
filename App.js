@@ -5,6 +5,8 @@
  */
 'use strict';
 import React, { Component } from 'react';
+import SearchPage from './SearchPage';
+
 import {
   Platform,
   StyleSheet,
@@ -14,16 +16,11 @@ import {
 } from 'react-native';
 
 
-class SearchPage extends Component {
-  render() {
-    return <Text style={styles.description}>Search for houses to buy!</Text>;
-}
-}
-  class PropertyFinder extends Component {
+class PropertyFinder extends Component {
   render() {
     return (
       <NavigatorIOS
-        style={styles.container}
+        style={styles.description}
         initialRoute={{
           title: 'Property Finder',
           component: SearchPage,
@@ -34,10 +31,7 @@ class SearchPage extends Component {
 
 const styles = StyleSheet.create({
   description: {
-    fontSize: 18,
-    textAlign: 'center',
-    color: '#656565',
-    marginTop: 65,
+    flex : 1
   },
 });
 
